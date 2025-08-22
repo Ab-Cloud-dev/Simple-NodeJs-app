@@ -48,7 +48,14 @@ sudo chown -R webapp:webapp /opt/simple-webapp
 
 ## Step 4: Create Application Files
 
-### Option A: Create files manually
+### Option A : Clone from Git (if you have the files in a repo)
+
+```bash
+# As webapp user
+sudo -u webapp git clone https://github.com/Ab-Cloud-dev/Simple-NodeJs-app.git /opt/simple-webapp
+```
+
+### Option B : Create files manually
 
 ```bash
 # Switch to app directory
@@ -267,12 +274,7 @@ button:hover {
 }
 ```
 
-### Option B: Clone from Git (if you have the files in a repo)
 
-```bash
-# As webapp user
-sudo -u webapp git clone https://github.com/yourusername/simple-webapp.git /opt/simple-webapp
-```
 
 ## Step 5: Install Node.js Dependencies
 
