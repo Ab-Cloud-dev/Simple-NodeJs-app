@@ -25,10 +25,6 @@ sudo chown -R webapp:webapp /opt/simple-webapp
 
 sudo apt update
 
-sudo apt install git -y
-
-# As webapp user
-sudo -u webapp git clone https://github.com/Ab-Cloud-dev/Simple-NodeJs-app.git /opt/simple-webapp
 
 
 # Navigate to app directory
