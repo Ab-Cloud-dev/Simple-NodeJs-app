@@ -5,7 +5,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # Install essential tools
-sudo apt install -y curl git build-essential nginx
+sudo apt install -y curl  build-essential nginx
 
 
  Download and run NodeSource setup script
