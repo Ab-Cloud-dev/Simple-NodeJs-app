@@ -1,3 +1,16 @@
+# It is a Simple web-app 
+
+<img width="1710" height="844" alt="image" src="https://github.com/user-attachments/assets/768d8785-bf4d-4227-a6e7-c4863ea14ab8" />
+
+# For Automatic Installation
+
+```bash
+
+sudo sh web-app-Installation.sh
+
+```
+
+
 # Manual Deployment Steps for Ubuntu
 
 ## Prerequisites
