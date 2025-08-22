@@ -1,0 +1,20 @@
+[Unit]
+Description={{ app_name }} Node.js Application
+After=network.target
+
+[Service]
+Type=simple
+User={{ app_user }}
+WorkingDirectory={{ app_dir }}
+ExecStart=/usr/bin/node {{ app_dir }}/server.js
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+Environment=PORT={{ app_port }}
+
+# Logging
+StandardOutput=append:/var/log/{{ app_name }}/app.log
+StandardError=append:/var/log/{{ app_name }}/error.log
+
+[Install]
+WantedBy=multi-user.target
