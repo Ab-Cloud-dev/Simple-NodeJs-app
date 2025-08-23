@@ -15,7 +15,7 @@ curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt install -y nodejs
 
 # Create a system user for the app (no login shell)
-sudo useradd -r -m -d /home/webapp -s /bin/bash webapp
+sudo useradd -r -m -d /home/webapp -s /bin/bash webapp || true
 
 # Create application directory
 sudo mkdir -p /opt/simple-webapp
@@ -67,6 +67,8 @@ EOF
 # Reload systemd
 sudo systemctl daemon-reload
 
+sudo systemctl enable simple-webapp
+
 # Start the service
 sudo systemctl start simple-webapp
 
@@ -108,3 +110,10 @@ sudo nginx -t
 
 # Restart Nginx
 sudo systemctl restart nginx
+
+sudo systemctl daemon-reload
+
+sudo systemctl restart simple-webapp
+
+# --- Check service status ---
+sudo systemctl status simple-webapp --no-pager          # Display service status without paging
