@@ -5,7 +5,7 @@
 # For Automatic Installation
 
 ```bash
-sudo apt install update
+sudo apt  update
 sudo apt install git 
 sudo git clone https://github.com/Ab-Cloud-dev/Simple-NodeJs-app.git /opt/simple-webapp
 sudo sh /opt/simple-webapp/web-app-Installation.sh
